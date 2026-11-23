@@ -2,46 +2,91 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#3b1028"><meta name="description" content="A little celebration of love for Shivam and Chanchal.">
-<title>Shivam &amp; Chanchal — A Celebration of Love</title>
+<meta name="theme-color" content="#321326">
+<meta name="description" content="A little celebration of Shivam and Chanchal — their love, memories, and forever.">
+<title>Shivam &amp; Chanchal | A Story of Us</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--wine:#3b1028;--rose:#a83d61;--cream:#fff8f1;--gold:#d7b477;--ink:#402b35}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,serif}
-.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:4rem 1.2rem;color:var(--cream);background:radial-gradient(ellipse at 50% 35%,#ab4b6f66,transparent 48%),linear-gradient(145deg,#210b1b,#4a1834 48%,#24101f)}
-.eyebrow,.label{font:700 .68rem Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
-h1{font-size:clamp(3rem,9vw,7rem);font-weight:400;line-height:1;margin:.5rem}h1 em{display:block;color:#e9c6ce;font-size:.62em}
-.hero p:not(.eyebrow){max-width:35rem;line-height:1.8;color:#f3dfe4;margin:1.5rem auto 2rem}
-a,button{font:inherit}.button{display:inline-block;border:1px solid var(--gold);border-radius:99px;padding:.9rem 1.4rem;color:var(--cream);background:#ffffff12;text-decoration:none;cursor:pointer}
-section.content{padding:5rem 1.2rem}.inner{max-width:1000px;margin:auto;text-align:center}h2{font-weight:400;color:var(--wine);font-size:clamp(2rem,5vw,3.8rem);margin:.6rem 0 1rem}.lead{max-width:700px;margin:auto;color:#765b66;line-height:1.9;font-size:1.1rem}
-.message{background:linear-gradient(135deg,#f9e8e9,#fff8f1)}.message-card{max-width:760px;margin:auto;padding:2.5rem;border:1px solid #e9c9ce;background:#ffffff99;line-height:1.9}
-.gallery{background:linear-gradient(#fff8f1,#f8e8e8)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}.photo{border:1px solid #e8c9cd;background:white;padding:.5rem;cursor:pointer;text-align:left}.photo img{width:100%;height:260px;object-fit:cover;display:block}.photo span{display:block;padding:.8rem;color:var(--wine)}.photo.missing img{display:none}.photo.missing:before{content:'Photograph will appear here after upload';display:grid;place-items:center;height:260px;padding:1rem;background:#f8e8e8;color:#765b66;font: .85rem Arial,sans-serif;text-align:center}
-.surprise{background:linear-gradient(145deg,#2b0d20,#5a1e3d);color:var(--cream)}.surprise h2{color:var(--cream)}.surprise .lead{color:#efdce3}.reveal{display:none;margin:2rem auto;max-width:650px;padding:2rem;border:1px solid #d7b47788}.reveal.show{display:block}
-.music{position:fixed;right:1rem;bottom:1rem;background:var(--wine);color:white;border:1px solid var(--gold);border-radius:99px;padding:.8rem 1rem;cursor:pointer}
-footer{text-align:center;background:#1f0a18;color:#d8b9c4;padding:2rem;font: .75rem/1.8 Arial,sans-serif}
-.lightbox{display:none;position:fixed;inset:0;background:#160711f2;z-index:5;align-items:center;justify-content:center;padding:1rem}.lightbox.show{display:flex}.lightbox img{max-width:95vw;max-height:82vh}.close{position:absolute;right:1rem;top:1rem}
-@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.grid{grid-template-columns:1fr}.photo img{height:300px}}
+:root{--wine:#321326;--wine2:#51233b;--rose:#b76e79;--blush:#f5e5e3;--cream:#fffaf4;--gold:#c9a76a;--ink:#382b30;--muted:#806b70}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif}button{font:inherit}
+.hero{min-height:100svh;position:relative;display:grid;place-items:center;overflow:hidden;text-align:center;color:var(--cream);padding:5rem 1.3rem;background:linear-gradient(135deg,#1c0b18ed,#4b2038dd),url("photos/photo-08.webp") center/cover}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid #d6b77b66;border-radius:50%;width:min(78vw,700px);aspect-ratio:1;pointer-events:none}.hero:after{width:min(66vw,590px)}
+.hero-content{position:relative;z-index:1;max-width:800px}.eyebrow,.kicker{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1,h2,h3,.script{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400}h1{font-size:clamp(4rem,12vw,8.5rem);line-height:.83;margin:2rem 0 1.5rem;letter-spacing:-.04em}h1 span{display:block;color:#e6c5c5;font-size:.48em;font-style:italic;margin:.45em 0}
+.hero-copy{font-family:"Cormorant Garamond",serif;font-size:clamp(1.2rem,2.4vw,1.6rem);line-height:1.55;color:#f4e6e6;max-width:570px;margin:0 auto 2.3rem}
+.btn{border:1px solid var(--gold);background:transparent;color:inherit;border-radius:99px;padding:.95rem 1.5rem;text-decoration:none;display:inline-flex;gap:.6rem;align-items:center;cursor:pointer;transition:.25s}.btn:hover{background:var(--gold);color:var(--wine);transform:translateY(-2px)}
+.scroll{position:absolute;bottom:1.6rem;left:50%;transform:translateX(-50%);font-size:.65rem;letter-spacing:.2em;color:#e9d4d6}
+section{padding:6rem 1.25rem}.wrap{max-width:1080px;margin:auto}.center{text-align:center}.kicker{color:var(--rose)}h2{font-size:clamp(2.8rem,6vw,4.8rem);line-height:.98;color:var(--wine);margin:.8rem 0 1.3rem}.intro{font-family:"Cormorant Garamond",serif;font-size:1.35rem;line-height:1.7;color:var(--muted);max-width:720px;margin:0 auto}
+.divider{display:flex;align-items:center;justify-content:center;gap:1rem;color:var(--gold);margin:2rem auto}.divider:before,.divider:after{content:"";width:65px;height:1px;background:#d8c49e}
+.letter{background:linear-gradient(135deg,#f8e9e7,#fffaf4)}.letter-card{max-width:800px;margin:auto;padding:clamp(2rem,6vw,4.5rem);background:#fffdf9;border:1px solid #e9d8d2;box-shadow:0 22px 70px #6d3b3b12;text-align:center;position:relative}.letter-card:before{content:"❧";position:absolute;top:12px;left:50%;transform:translateX(-50%);color:var(--gold);font-size:1.5rem}.letter-card p{font-family:"Cormorant Garamond",serif;font-size:1.3rem;line-height:1.8;color:#6e5960}
+.gallery{background:#fffaf4}.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem}.shot{border:0;padding:0;background:#eee2df;position:relative;overflow:hidden;cursor:pointer;aspect-ratio:4/5;box-shadow:0 10px 30px #32132612}.shot:nth-child(3n+2){transform:translateY(24px)}.shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}.shot:hover img{transform:scale(1.06)}.shot:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#1b0d17a8);opacity:.65}.shot span{position:absolute;bottom:1rem;left:1rem;color:white;z-index:1;font-family:"Cormorant Garamond",serif;font-size:1.2rem}
+.wishes{background:linear-gradient(140deg,#2b1022,#54253e);color:var(--cream);position:relative;overflow:hidden}.wishes h2{color:var(--cream)}.wishes .intro{color:#ead8dc}.wish-box{max-width:680px;margin:2rem auto 0;border:1px solid #c9a76a77;padding:2rem;display:none;background:#ffffff08}.wish-box.show{display:block;animation:rise .7s ease}.wish-box p{font:1.45rem/1.7 "Cormorant Garamond",serif;color:#f5e8e8}
+footer{background:#1c0b17;color:#d9c3ca;text-align:center;padding:2.5rem 1rem;font-size:.75rem;letter-spacing:.08em}.footer-heart{color:var(--gold);font-size:1.2rem;margin:.5rem}
+.music{position:fixed;right:1rem;bottom:1rem;z-index:4;background:#321326;color:white;border:1px solid var(--gold);border-radius:99px;padding:.8rem 1rem;cursor:pointer;box-shadow:0 8px 24px #1b0d1730}.music small{font-size:.7rem}
+.lightbox{display:none;position:fixed;inset:0;z-index:10;background:#130811f2;align-items:center;justify-content:center;padding:2rem}.lightbox.open{display:flex}.lightbox img{max-width:95vw;max-height:85vh;object-fit:contain}.close{position:absolute;right:1rem;top:1rem;color:white;background:#ffffff18}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media(max-width:850px){.gallery-grid{grid-template-columns:repeat(2,1fr)}.shot:nth-child(3n+2){transform:none}.shot:nth-child(4n+2){transform:translateY(15px)}}
+@media(max-width:520px){section{padding:4.5rem 1rem}.gallery-grid{gap:.65rem}.shot span{font-size:1rem;left:.65rem;bottom:.65rem}.hero:before{width:95vw}.hero:after{width:82vw}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<header class="hero"><div><p class="eyebrow">A little celebration of forever</p><h1>Shivam <em>&amp;</em> Chanchal</h1><p>Two hearts, one beautiful journey, and countless reasons to celebrate the love that makes every day brighter.</p><a class="button" href="#message">Open your surprise ♡</a></div></header>
-<section class="content" id="message"><div class="inner"><p class="label">To a wonderful couple</p><h2>Happy Marriage Anniversary</h2><p class="lead">May your life together continue to be filled with gentle moments, shared laughter, endless support, and a love that grows more beautiful with every passing year.</p></div></section>
-<section class="content message"><div class="message-card"><p class="label">A message from the heart</p><h2>Love is in the little things</h2><p>It is in the smiles you share, the memories you create, the dreams you build together, and the comfort of knowing you always have each other.</p><p>Wishing you both many more years of togetherness, good health, happiness, new adventures, and beautiful reasons to smile.</p><p>With lots of love ♡</p></div></section>
-<section class="content gallery"><div class="inner"><p class="label">A glimpse into their story</p><h2>Moments to treasure</h2><p class="lead">Tap any photograph to view it larger.</p><div class="grid">
-<button class="photo" data-photo="photos/bride-portrait.jpg" data-caption="A beautiful beginning"><img src="photos/bride-portrait.jpg" alt="A beautiful beginning — Shivam and Chanchal" loading="lazy"><span>A beautiful beginning</span></button>
-<button class="photo" data-photo="photos/garland-ceremony.jpg" data-caption="The garland ceremony"><img src="photos/garland-ceremony.jpg" alt="The garland ceremony — Shivam and Chanchal" loading="lazy"><span>The garland ceremony</span></button>
-<button class="photo" data-photo="photos/wedding-portrait.jpg" data-caption="Together, always"><img src="photos/wedding-portrait.jpg" alt="Together, always — Shivam and Chanchal" loading="lazy"><span>Together, always</span></button>
-<button class="photo" data-photo="photos/celebration-together.jpg" data-caption="A moment to remember"><img src="photos/celebration-together.jpg" alt="A moment to remember — Shivam and Chanchal" loading="lazy"><span>A moment to remember</span></button>
-<button class="photo" data-photo="photos/wedding-entry.jpg" data-caption="Celebrating love"><img src="photos/wedding-entry.jpg" alt="Celebrating love — Shivam and Chanchal" loading="lazy"><span>Celebrating love</span></button>
-<button class="photo" data-photo="photos/grand-celebration.jpg" data-caption="A grand beginning"><img src="photos/grand-celebration.jpg" alt="A grand beginning — Shivam and Chanchal" loading="lazy"><span>A grand beginning</span></button>
-<button class="photo" data-photo="photos/veil-moment.jpg" data-caption="A tender moment"><img src="photos/veil-moment.jpg" alt="A tender moment — Shivam and Chanchal" loading="lazy"><span>A tender moment</span></button>
-<button class="photo" data-photo="photos/hands-together.jpg" data-caption="Hand in hand"><img src="photos/hands-together.jpg" alt="Hand in hand — Shivam and Chanchal" loading="lazy"><span>Hand in hand</span></button>
-</div></div></section>
-<section class="content surprise"><div class="inner"><p class="label">One last little surprise</p><h2>There is more to celebrate...</h2><p class="lead">Tap below to open a final wish made especially for Shivam and Chanchal.</p><button class="button" id="revealBtn">Reveal your wish ✦</button><div class="reveal" id="reveal"><h2>Forever looks beautiful on you two.</h2><p>May your love always be your safe place, your laughter your favourite sound, and your journey together your greatest blessing.</p><strong>Happy Anniversary, Shivam &amp; Chanchal!</strong></div></div></section>
-<audio id="music" src="soft-piano-loop.wav" loop preload="none"></audio><button class="music" id="musicBtn" disabled title="Music file will be added with the media upload">♫ Music coming soon</button>
-<div class="lightbox" id="lightbox"><button class="button close" id="close">Close ×</button><figure><img id="large" alt=""><figcaption id="caption"></figcaption></figure></div>
-<footer>Made with love for Shivam &amp; Chanchal<br>May your happily-ever-after keep unfolding.</footer>
+<header class="hero">
+ <div class="hero-content">
+  <div class="eyebrow">A celebration of love • A lifetime of memories</div>
+  <h1>Shivam <span>&amp;</span> Chanchal</h1>
+  <p class="hero-copy">Some stories are written in the stars. The most beautiful ones are written together, one little moment at a time.</p>
+  <a class="btn" href="#their-story">Step into their story <span>♡</span></a>
+ </div><div class="scroll">SCROLL TO CELEBRATE ↓</div>
+</header>
+<main>
+<section id="their-story"><div class="wrap center">
+ <div class="kicker">To two beautiful souls</div><h2>Happy Anniversary</h2>
+ <p class="intro">May every new chapter bring you closer, every ordinary day hold a little magic, and every year give you even more reasons to choose each other.</p>
+ <div class="divider">✧ ♡ ✧</div>
+ <p class="script" style="font-size:1.5rem;color:var(--rose)">Here's to your forever.</p>
+</div></section>
+<section class="letter"><div class="letter-card">
+ <div class="kicker">A note from the heart</div><h2>For Shivam &amp; Chanchal</h2>
+ <p>Love isn't only found in grand celebrations. It's in the quiet understanding, the shared laughter, the little acts of kindness, and the promise to stand beside each other through every season.</p>
+ <p>May your home always be filled with warmth, your hearts with patience, your days with laughter, and your journey with beautiful surprises.</p>
+ <p>Wishing you a lifetime of friendship, partnership, adventures, and a love that keeps growing.</p>
+ <div class="divider">♡</div><p style="color:var(--wine);font-style:italic">With love, today and always.</p>
+</div></section>
+<section class="gallery"><div class="wrap center">
+ <div class="kicker">The memories that make a lifetime</div><h2>Little moments, forever treasures</h2>
+ <p class="intro">A few frames from a day full of promises, smiles, and the beginning of a beautiful journey.</p>
+ <div class="gallery-grid">
+  <button class="shot" data-caption="A beautiful beginning"><img src="photos/photo-01.webp" alt="Shivam and Chanchal together on their wedding day" loading="lazy"><span>A beautiful beginning</span></button>
+  <button class="shot" data-caption="A bride full of grace"><img src="photos/photo-02.webp" alt="Chanchal in her bridal attire" loading="lazy"><span>Grace &amp; beauty</span></button>
+  <button class="shot" data-caption="A promise held close"><img src="photos/photo-03.webp" alt="A tender wedding ritual" loading="lazy"><span>A promise held close</span></button>
+  <button class="shot" data-caption="A moment to remember"><img src="photos/photo-04.webp" alt="A wedding moment beneath the lights" loading="lazy"><span>A moment to remember</span></button>
+  <button class="shot" data-caption="A celebration of love"><img src="photos/photo-05.webp" alt="A joyful wedding celebration" loading="lazy"><span>Pure celebration</span></button>
+  <button class="shot" data-caption="Together, always"><img src="photos/photo-06.webp" alt="Shivam and Chanchal celebrating together" loading="lazy"><span>Together, always</span></button>
+  <button class="shot" data-caption="The magic of the day"><img src="photos/photo-07.webp" alt="A magical wedding moment" loading="lazy"><span>The magic of the day</span></button>
+  <button class="shot" data-caption="Hand in hand into forever"><img src="photos/photo-08.webp" alt="Shivam and Chanchal, newly married" loading="lazy"><span>Into forever</span></button>
+ </div>
+</div></section>
+<section class="wishes"><div class="wrap center">
+ <div class="kicker">One more wish, just for you</div><h2>And the best is yet to come...</h2>
+ <p class="intro">A little reminder for two people whose journey deserves all the happiness in the world.</p>
+ <button class="btn" id="reveal">Open your little wish ✦</button>
+ <div class="wish-box" id="wish"><p>May you never stop finding new reasons to fall in love, new places to explore, and new dreams to build side by side.</p><h3 style="font-size:2rem;color:var(--gold)">Happy Anniversary, Shivam &amp; Chanchal!</h3><div>May your forever be as beautiful as your beginning. ♡</div></div>
+</div></section>
+</main>
+<footer><div>MADE WITH LOVE FOR SHIVAM &amp; CHANCHAL</div><div class="footer-heart">♡</div><div>May your happily-ever-after keep unfolding.</div></footer>
+<button class="music" id="music" aria-label="Toggle gentle background music">♫ <small id="music-label">Play music</small></button>
+<div class="lightbox" id="lightbox"><button class="btn close" id="close">Close ×</button><img id="large" alt=""></div>
 <script>
-document.getElementById('revealBtn').onclick=()=>document.getElementById('reveal').classList.add('show');
-const lb=document.getElementById('lightbox'),large=document.getElementById('large');document.querySelectorAll('.photo').forEach(b=>{const img=b.querySelector('img');img.onerror=()=>b.classList.add('missing');b.onclick=()=>{if(b.classList.contains('missing'))return;large.src=b.dataset.photo;large.alt=b.dataset.caption;document.getElementById('caption').textContent=b.dataset.caption;lb.classList.add('show')}});document.getElementById('close').onclick=()=>lb.classList.remove('show');lb.onclick=e=>{if(e.target===lb)lb.classList.remove('show')};
-
-</script></body></html>
+document.getElementById('reveal').addEventListener('click',()=>document.getElementById('wish').classList.toggle('show'));
+const lightbox=document.getElementById('lightbox'),large=document.getElementById('large');
+document.querySelectorAll('.shot').forEach(b=>b.addEventListener('click',()=>{large.src=b.querySelector('img').src;large.alt=b.dataset.caption;lightbox.classList.add('open')}));
+document.getElementById('close').addEventListener('click',()=>lightbox.classList.remove('open'));
+lightbox.addEventListener('click',e=>{if(e.target===lightbox)lightbox.classList.remove('open')});
+let audioCtx=null,master=null,playing=false,timer=null,step=0;
+const notes=[[261.63,329.63,392,523.25],[220,261.63,329.63,440],[174.61,220,261.63,349.23],[196,246.94,293.66,392]];
+function chord(){if(!playing||!audioCtx)return;const now=audioCtx.currentTime;notes[step%notes.length].forEach((f,i)=>{const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(0,now);g.gain.linearRampToValueAtTime(i===0?.035:.018,now+.8);g.gain.exponentialRampToValueAtTime(.001,now+3.7);o.connect(g);g.connect(master);o.start(now);o.stop(now+3.8)});step++;timer=setTimeout(chord,3200)}
+document.getElementById('music').addEventListener('click',async()=>{const label=document.getElementById('music-label');if(!playing){audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();await audioCtx.resume();master=master||audioCtx.createGain();master.gain.value=.45;master.connect(audioCtx.destination);playing=true;label.textContent='Pause music';chord()}else{playing=false;clearTimeout(timer);if(audioCtx)await audioCtx.suspend();label.textContent='Play music'}});
+</script>
+</body></html>
